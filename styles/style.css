@@ -2,4 +2,382 @@
 
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+  display: grid;
+  background-color: var(--background-color);
+  gap: 40px;
+}
+
+@media (min-width: 768px) {
+  .page {
+    gap: 60px;
+  }
+}
+
+.header {
+  background: var(--header-background);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  align-items: center;
+  padding: 10px;
+}
+
+.header__text-recording {
+  display: var(--rec-showing);
+  position: absolute;
+  color: var(--decorated-color);
+  align-self: start;
+  justify-self: end;
+  padding-right: 28px;
+
+  font-family: IBM Plex Mono;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 25px;
+  letter-spacing: 0em;
+  text-align: center;
+}
+
+.header__text-recording::after {
+  position: absolute;
+  content: "";
+  height: 9px;
+  width: 9px;
+  background-color: var(--decorated-color);
+  border-radius: 100%;
+  top: 8px;
+  left: 42px;
+  box-shadow: 0px 0px 4px 2px #FF0070;
+}
+
+.decorated-zone::before{
+  position: absolute;
+  content: "";
+  height: 25px;
+  width: 25px;
+  border: 1px solid var(--decorated-color);
+  border-left: none;
+  border-bottom: none;
+  align-self: start;
+  justify-self: end;
+}
+
+.decorated-zone::after{
+  position: absolute;
+  content: "";
+  height: 25px;
+  width: 25px;
+  border: 1px solid var(--decorated-color);
+  border-top: none;
+  border-right: none;
+  align-self: end;
+  justify-self: start;
+  padding-bottom: 10px;
+}
+
+.header__theme-menu-list {
+  display: grid;
+  justify-content: end;
+  gap: 11px;
+}
+
+.header__theme-menu-button {
+  color: var(--decorated-color);
+  background: none;
+
+  font-family: IBM Plex Mono;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 18px;
+  letter-spacing: 0em;
+  min-width: 70px;
+  min-height: 26px;
+  padding-bottom: 4px;
+}
+
+.header__theme-menu-button:hover {
+  border: 1px solid var(--decorated-color);
+}
+
+.header__theme-menu-button:focus {
+  border: 1px solid var(--decorated-color);
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}
+
+.header__theme-menu-button:active {
+  border: 1px solid var(--decorated-color);
+}
+
+.header-title {
+  font-family: IBM Plex Mono;
+  font-size: 116px;
+  font-weight: 700;
+  line-height: 96px;
+  letter-spacing: 0em;
+  text-align: left;
+
+  color: var(--title-text-color);
+  text-shadow: 5px 5px var(--title-text-shadows);
+}
+
+.header-paragraph {
+  font-family: IBM Plex Mono;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: left;
+
+  background-color: var(--paragraph-background-color);
+  color: var(--paragraph-name-text-color);
+  max-width: 355px;
+  justify-self: end;
+}
+
+@media (min-width: 768px) {
+
+  .header{
+    padding: 20px;
+  }
+
+  .header-title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+    margin-left: -20px;
+  }
+
+  .header-paragraph{
+    
+  }
+}
+
+@media (min-width: 1024px) {
+
+  .header__theme-menu {
+    align-self: start;
+    justify-self: center;
+  }
+
+  .header__theme-menu-list {
+    display: grid;
+    grid-template-columns: min-content min-content min-content;
+  }
+
+  .header-paragraph{
+    max-width: 491px;
+    
+  }
+}
+
+.main {
+  display: grid;
+  gap: 50px;
+  padding: 0px 10px 0px 10px;
+}
+
+.сhapter {
+  display: grid;
+  gap: 20px;
+}
+
+.headline {
+  color: var(--headline-color);
+  width: 355px;
+
+  font-family: IBM Plex Mono;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.block-text {
+  display: grid;
+  gap: 20px;
+}
+
+.thematic-block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.paragraph-name {
+  color: var(--paragraph-name-text-color);
+  background-color: var(--paragraph-background-color);
+
+  font-family: IBM Plex Mono;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 23px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.paragraph {
+  color: var(--paragraph-text-color);
+
+  font-family: IBM Plex Mono;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 23.48px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+
+  .main {
+    padding: 0px 20px 0px 20px;
+    gap: 80px;
+  }
+
+  .headline {
+    width: 236px;
+  }
+
+  .сhapter-columns {
+    display: grid;
+    grid-template-columns: auto 1fr;
+  }
+
+}
+
+@media (min-width: 1024px) { 
+
+  .headline {
+    width: 315px;
+  }
+   
+  .block-text-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+}
+
+.image-section {
+  display: grid;
+  gap: 10px;
+}
+
+.images-set {
+  display: grid;
+  gap: 10px;
+}
+
+.images {
+  height: auto;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+
+  .image-section {
+    display: grid;
+    gap: 20px;
+  }
+
+  .images {
+    object-fit: cover;
+    height: 100%;
+    width: 100;
+  }
+
+  .sunset {
+    grid-area: sunset;
+  }
+
+  .ice-cream {
+    grid-area: ice-cream ;
+  }
+
+  .tape {
+    grid-area: tape;
+  }
+
+  .books {
+    grid-area: books;
+  }
+
+  .street {
+    grid-area: street;
+  }
+
+  .images-set {
+    
+    display: grid;
+    gap: 20px;
+
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas: 
+    "sunset sunset ice-cream"
+    "tape books ice-cream"
+    "tape street street";
+
+  }
+}
+
+.footer {
+  height: 100vh;
+  display: grid;
+  padding: 10px;
+}
+
+.footer-title {
+  align-self: center;
+  justify-self: center;
+  color: var(--title-text-color);
+  text-shadow: 2px 2px var(--title-text-shadows);
+
+  font-family: IBM Plex Mono;
+  font-size: 116px;
+  font-weight: 700;
+  line-height: 96px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+@media (min-width: 768px) {
+
+  .footer {
+    height: 100vh;
+    display: grid;
+    padding: 20px;
+  }
+
+  .footer-title {
+    font-size: 120px;
+  }
+  
+}
+
+@media (min-width: 1024px) { 
+
+  .footer-title {
+    font-size: 157px;
+  }
+
+}
+
+.link {
+  text-decoration: none;
+  text-shadow: 2px 2px var(--link-text-shadows);
+}
+
+.link:hover {
+  border: 1px solid var(--decorated-color);
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}
+
+.link:focus {
+  outline: 1px solid green;
+  outline-offset: 0px;
 }
