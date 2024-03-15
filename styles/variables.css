@@ -3,15 +3,15 @@
   и их переопределение под различные устройства
 */
 :root {
-  --background-color: #000028;
-  --decorated-color: #FF0070;
-  --title-text-color: #DB00FF;
+  --background-color: #FFF1F7;
+  --decorated-color: #353430;
+  --title-text-color: #FFC2E6;
   --title-text-shadows: #FF0070;
-  --header-background: url(/images/cover-image-dark.png);
-  --paragraph-background-color: #FF0070;
-  --headline-color: #FF0070;
-  --paragraph-name-text-color: #000028;
-  --paragraph-text-color: #F1B2CE;
-  --rec-showing: block;
-  --link-text-shadows: #FF0070;
+  --header-background: url(/images/cover-image-light.png);
+  --paragraph-background-color: #FF8DCB;
+  --headline-color: #353430;
+  --paragraph-name-text-color: #353430;
+  --paragraph-text-color: #353430;
+  --rec-showing: none;
+  --link-text-shadows: #FF8DCB;
 }
