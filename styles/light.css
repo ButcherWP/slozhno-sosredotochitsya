@@ -23,9 +23,8 @@
 }
 
 @media (prefers-color-scheme: light) {
-  
+
   :root {
-        /* Дублируем переменные светлой темы */    
         --background-color: #FFF1F7;
         --decorated-color: #353430;
         --title-text-color: #FFC2E6;
