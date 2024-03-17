@@ -13,7 +13,7 @@
   --decorated-color: #353430;
   --title-text-color: #FFC2E6;
   --title-text-shadows: #FF0070;
-  --header-background: url(/images/cover-image-light.png);
+  --header-background: url(../images/cover-image-light.png);
   --paragraph-background-color: #FF8DCB;
   --headline-color: #353430;
   --paragraph-name-text-color: #353430;
@@ -29,7 +29,7 @@
         --decorated-color: #353430;
         --title-text-color: #FFC2E6;
         --title-text-shadows: #FF0070;
-        --header-background: url(/images/cover-image-light.png);
+        --header-background: url(../images/cover-image-light.png);
         --paragraph-background-color: #FF8DCB;
         --headline-color: #353430;
         --paragraph-name-text-color: #353430;

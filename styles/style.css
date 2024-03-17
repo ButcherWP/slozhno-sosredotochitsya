@@ -18,7 +18,7 @@
   background: var(--header-background);
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  min-height: 668px;
   display: grid;
   grid-template-rows: 1fr min-content 1fr;
   align-items: center;
@@ -33,7 +33,7 @@
   justify-self: end;
   padding-right: 28px;
 
-  font-family: IBM Plex Mono;
+  font-family: IBM Plex Mono, serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 25px;
@@ -81,36 +81,33 @@
 .header__theme-menu-list {
   display: grid;
   justify-content: end;
-  gap: 11px;
+  gap: 11px; 
 }
 
 .header__theme-menu-button {
   color: var(--decorated-color);
-  background: none;
-
-  font-family: IBM Plex Mono;
+  min-width: 70px;
+  padding-top: 2px;
+  padding-bottom: 5px;
+  
+  font-family: IBM Plex Mono, serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 18px;
   letter-spacing: 0em;
-  min-width: 70px;
-  min-height: 26px;
-  padding-bottom: 4px;
+  text-align: center;
 }
 
 .header__theme-menu-button:hover {
-  border: 1px solid var(--decorated-color);
+  outline: 1px solid var(--decorated-color);
 }
 
 .header__theme-menu-button:focus {
-  border: 1px solid var(--decorated-color);
-  border-top: none;
-  border-right: none;
-  border-left: none;
+  box-shadow: 0 1px 0 0 var(--decorated-color);
 }
 
-.header__theme-menu-button:active {
-  border: 1px solid var(--decorated-color);
+.header__theme-menu-button_active {
+  outline: 1px solid var(--decorated-color);
 }
 
 .header-title {
@@ -135,7 +132,7 @@
 
   background-color: var(--paragraph-background-color);
   color: var(--paragraph-name-text-color);
-  max-width: 355px;
+  max-width: 364px;
   justify-self: end;
 }
 
@@ -143,11 +140,15 @@
 
   .header {
     padding: 20px;
+    padding-left: 0px;
   }
 
   .header-title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    margin-left: -20px;
+  }
+
+  .decorated-zone::after {
+    margin-left: 20px;
   }
 
 }
@@ -160,13 +161,12 @@
   }
 
   .header__theme-menu-list {
-    display: grid;
     grid-template-columns: min-content min-content min-content;
   }
 
   .header-paragraph {
     max-width: 491px;
-    
+    margin-top: 12px;
   }
 }
 
@@ -176,7 +176,7 @@
   padding: 0px 10px 0px 10px;
 }
 
-.сhapter {
+.chapter {
   display: grid;
   gap: 20px;
 }
@@ -238,7 +238,7 @@
     width: 236px;
   }
 
-  .сhapter-columns {
+  .chapter-columns {
     display: grid;
     grid-template-columns: auto 1fr;
   }
@@ -322,7 +322,7 @@
 }
 
 .footer {
-  height: 100vh;
+  min-height: 668px;
   display: grid;
   padding: 10px;
 }
@@ -344,7 +344,7 @@
 @media (min-width: 768px) {
 
   .footer {
-    height: 100vh;
+    min-height: 668px;
     display: grid;
     padding: 20px;
   }
@@ -378,4 +378,14 @@
 .link:focus {
   outline: 1px solid green;
   outline-offset: 0px;
+}
+
+@media (min-height: 668px) {
+  .header{
+    min-height: 100vh;
+  }
+
+  .footer {
+    min-height: 100vh;
+  }
 }
