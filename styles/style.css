@@ -81,7 +81,7 @@
 .header__theme-menu-list {
   display: grid;
   justify-content: end;
-  gap: 11px; 
+  gap: 11px;
 }
 
 .header__theme-menu-button {
@@ -381,6 +381,7 @@
 }
 
 @media (min-height: 668px) {
+
   .header{
     min-height: 100vh;
   }
@@ -388,4 +389,5 @@
   .footer {
     min-height: 100vh;
   }
+
 }
