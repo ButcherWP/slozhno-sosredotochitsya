@@ -3,13 +3,14 @@
 .page {
   /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
   display: grid;
-  background-color: var(--background-color);
+  
   gap: 40px;
   background: var(--header-background);
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-color: var(--background-color);
 }
 
 @media (min-width: 768px) {
