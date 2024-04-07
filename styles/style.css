@@ -227,7 +227,7 @@
   color: var(--paragraph-name-text-color);
   background-color: var(--paragraph-background-color);
 
-  font-family: IBM Plex Mono;
+  font-family: IBM Plex Mono, serif;
   font-size: 18px;
   font-weight: 700;
   line-height: 23px;
